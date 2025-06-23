@@ -17,8 +17,7 @@ workflow = Workflow()
 # When you deploy your frontend, add its production URL here as well.
 origins = [
     "http://localhost:8080",  # Your local frontend development server
-    # Add your deployed frontend URL(s) here when you deploy your UI to Render.
-    # For example: "https://your-frontend-app-name.onrender.com",
+    "https://research-ai-frontend-4qn2.onrender.com", # <--- ADDED: Your deployed frontend URL
     # If you need to allow all origins during initial development (less secure, use with caution):
     # "*",
 ]
