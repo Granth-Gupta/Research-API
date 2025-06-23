@@ -1,3 +1,9 @@
 fastapi
 uvicorn
 python-dotenv
+firecrawl
+langchain
+langchain-google-genai
+langgraph
+pydantic
+fastapi
