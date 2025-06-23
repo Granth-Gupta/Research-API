@@ -1,0 +1,53 @@
+(Research) PS C:\Users\Granth Gupta\Desktop\AI Agents\Research> uv run .\main.py
+Developer Tools Research Agent
+
+🔍 Developer Tools Query: firebase
+🔍 Finding articles about: firebase
+Extracted tools: Firebase Authentication, Firebase Realtime Database, Cloud Firestore, Firebase Cloud Functions, Firebase Hosting
+🔬 Researching specific tools: Firebase Authentication, Firebase Realtime Database, Cloud Firestore, Firebase Cloud Functions
+Generating recommendations
+
+📊 Results for: firebase
+============================================================
+
+1. 🏢 Firebase Authentication
+   🌐 Website: https://firebase.google.com/pricing
+   💰 Pricing: Freemium
+   📖 Open Source: None
+   🔌 API: ✅ Available
+   📝 Description: Firebase Authentication provides backend authentication services for developers.
+
+
+2. 🏢 Firebase Realtime Database
+   🌐 Website: https://firebase.google.com/pricing
+   💰 Pricing: Freemium
+   📖 Open Source: None
+   🛠️  Tech Stack: Firebase
+   🔌 API: ✅ Available
+   🔗 Integrations: Cloud Run, Cloud Build, Artifact Registry
+   📝 Description: Firebase Realtime Database offers a cloud-hosted NoSQL database solution with generous free tier limits and pay-as-you-go options for scalable app development.
+
+
+3. 🏢 Cloud Firestore
+   🌐 Website: https://cloud.google.com/firestore/pricing
+   💰 Pricing: Freemium
+   📖 Open Source: False
+   🔌 API: ✅ Available
+   📝 Description: Cloud Firestore is a NoSQL document database built for automatic scaling, high performance, and ease of application development.
+
+
+4. 🏢 Firebase Cloud Functions
+   🌐 Website: https://firebase.google.com/pricing
+   💰 Pricing: Freemium
+   📖 Open Source: None
+   🛠️  Tech Stack: Cloud Run, Cloud Build, Artifact Registry
+   🛠️  Tech Stack: Cloud Run, Cloud Build, Artifact Registry
+   🔌 API: ❌ Not Available
+   📝 Description: Firebase Cloud Functions provides a pay-as-you-go platform for deploying and scaling backend logic, with a free tier for initial development.
+
+Developer Recommendations:
+----------------------------------------
+For backend authentication, Firebase Authentication is a solid choice due to its ease of integration and comprehensive feature set. Consider the pricing tiers as your user base grows, as costs scale with authentication volume. Its main advantage is simplified user management and integration with other Firebase services.
+
+🔍 Developer Tools Query: quit
+(Research) PS C:\Users\Granth Gupta\Desktop\AI Agents\Research>
