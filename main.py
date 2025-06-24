@@ -16,9 +16,6 @@ workflow = Workflow()
 # You MUST include 'http://localhost:8080' for your local development.
 # When you deploy your frontend, add its production URL here as well.
 origins = [
-    "http://localhost:8000", # Common local development port
-    "http://localhost:3000", # Common local development port (e.g., React/Vue default)
-    "http://localhost:8080", # Your specified local frontend development server
     "https://research-ai-frontend-4qn2.onrender.com", # Your deployed frontend URL
     # If you need to allow all origins during initial development (less secure, use with caution):
     # "*",
