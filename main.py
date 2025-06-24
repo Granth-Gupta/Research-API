@@ -12,14 +12,10 @@ app = FastAPI()
 workflow = Workflow()
 
 # Configure CORS middleware
-# This list specifies which origins (domains/ports) are allowed to make requests to your API.
-# You MUST include 'http://localhost:8080' for your local development.
-# When you deploy your frontend, add its production URL here as well.
+# This list now specifies ONLY your deployed frontend and API origins.
 origins = [
-    "http://localhost:8080",        # Local development frontend URL
     "https://research-ai-frontend-4qn2.onrender.com", # Your deployed frontend URL
-    # If you need to allow all origins during initial development (less secure, use with caution):
-    # "*",
+    "https://research-api-0ff3.onrender.com",         # Your deployed API's own domain (if serving UI from it or if UI fetches from it)
 ]
 
 app.add_middleware(
@@ -66,4 +62,4 @@ def run_research(request: QueryRequest):
         "developer_recommendations": result.analysis
     }
 
-# uvicorn main:app --reload --port 8000
+# To run locally: uvicorn main:app --reload --port 8000
