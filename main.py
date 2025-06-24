@@ -14,8 +14,8 @@ workflow = Workflow()
 # Configure CORS middleware
 # This list now specifies ONLY your deployed frontend and API origins.
 origins = [
-    "https://research-ai-frontend-4qn2.onrender.com", # Your deployed frontend URL
-    "https://research-api-0ff3.onrender.com",         # Your deployed API's own domain (if serving UI from it or if UI fetches from it)
+    "https://research-ai-frontend-1.onrender.com", # Your deployed frontend URL
+    # "https://research-api-0ff3.onrender.com",         # Your deployed API's own domain (if serving UI from it or if UI fetches from it)
 ]
 
 app.add_middleware(
