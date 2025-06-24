@@ -1,8 +1,8 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware # Import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from src.workflow import Workflow
-from fastapi.middleware.cors import CORSMiddleware # NEW: Import CORS middleware
 
 # Load environment variables
 load_dotenv()
@@ -11,25 +11,24 @@ load_dotenv()
 app = FastAPI()
 workflow = Workflow()
 
-# NEW: Configure CORS middleware
-# This list specifies which origins (domains/ports) are allowed to make requests to your API.
-# You MUST include 'http://localhost:8080' for your local development.
-# When you deploy your frontend, add its production URL here as well.
+# Define the origins that are allowed to make requests to your API
+# In a production environment, you should replace "*" with the specific domain(s) of your frontend application.
+# For example: origins = ["https://research-ai-frontend.gh2.onrender.com"]
 origins = [
+    "http://localhost",
+    "http://localhost:8000",
     "http://localhost:8080",  # Your local frontend development server
-    "https://research-ai-frontend-4qn2.onrender.com", # <--- ADDED: Your deployed frontend URL
-    # If you need to allow all origins during initial development (less secure, use with caution):
-    # "*",
+    "https://research-ai-frontend-4qh2.onrender.com", # Your deployed frontend
 ]
 
+# Add CORS middleware to the FastAPI application
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,          # List of allowed origins
-    allow_credentials=True,         # Allow cookies to be included in cross-origin requests
-    allow_methods=["*"],            # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],            # Allow all headers in cross-origin requests
+    allow_origins=origins, # Allows specific origins
+    allow_credentials=True, # Allows cookies to be included in cross-origin requests
+    allow_methods=["*"], # Allows all HTTP methods (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"], # Allows all headers
 )
-
 
 # Define request model
 class QueryRequest(BaseModel):
@@ -65,5 +64,3 @@ def run_research(request: QueryRequest):
         "companies": companies,
         "developer_recommendations": result.analysis
     }
-
-# uvicorn main:app --reload --port 8000
